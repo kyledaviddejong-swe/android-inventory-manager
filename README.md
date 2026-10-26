@@ -2,7 +2,7 @@
 
 A Java Android app for keeping track of stock: create an account, find an item, change its quantity or location, and get back to work. Inventory and account settings persist locally in SQLite.
 
-**Included:** the Android Studio project, Gradle wrapper, and focused JUnit/Robolectric tests. Android 14 (API 34) or newer is required to run the app.
+**Included:** the Android Studio project, Gradle wrapper, and JUnit/Robolectric tests. Android 14 (API 34) or newer is required to run the app.
 
 ## What it does
 
@@ -21,7 +21,7 @@ All accounts on an installation use the **same warehouse inventory**. Account cr
 3. Let Gradle sync finish. The included wrapper uses **Gradle 9.5.0**, and the supplied daemon configuration selects **JDK 25**. A compatible JDK can be provisioned automatically on the first run, which requires internet access.
 4. Start an Android 14 or newer emulator, select the `app` configuration, and run it.
 
-Create a disposable account, log in, and add a few sample items. For example, add **Bolts / 12 / A1** and **Washers / 0 / B2**, then try search, the out-of-stock filter, editing, and deletion.
+Create a test account, log in, and add a few sample items. For example, add **Bolts / 12 / A1** and **Washers / 0 / B2** (name / quantity / location), then try search, the out-of-stock filter, editing, and deletion.
 
 To build from a terminal after configuring the Android SDK:
 
@@ -31,7 +31,7 @@ To build from a terminal after configuring the Android SDK:
 
 On Windows, use `gradlew.bat` instead of `./gradlew`. The debug APK is generated at `app/build/outputs/apk/debug/app-debug.apk` and is intentionally excluded from source control.
 
-SMS is optional. Leave it disabled for the ordinary demo. Real sending requires a suitable device/SIM, permission, and a destination you control or have permission to contact. Carrier charges may apply. Submitting a message to Android does not confirm delivery.
+SMS is optional. Leave it disabled to try the inventory features. To send alerts, use an SMS-capable device with an active SIM, grant SMS permission, and enter a test number you control. Carrier charges may apply. The app reports when a message is submitted to Android; it does not confirm delivery.
 
 ## Tests
 
@@ -43,7 +43,7 @@ Verified October 26, 2026: the debug build succeeded, **all 15 tests passed**, a
 
 The tests cover password verification, account persistence, inventory CRUD and search, invalid quantities, database migration, account-specific SMS preferences, disabling alerts, and permission-screen recreation. They run with Robolectric on the JVM and do not send real SMS messages.
 
-See [verification and remaining limits](docs/VERIFICATION.md) for what was actually checked.
+See [test results and known limitations](docs/VERIFICATION.md) for details.
 
 ## Code map
 
@@ -59,6 +59,6 @@ The Java source is under [app/src/main/java/com/example/kyle_dejong_inventory_ap
 
 ## Background
 
-I built this as an undergraduate mobile-development project, working through the Android activity lifecycle, adapters, SQLite persistence and runtime permissions. The inventory workflow is the main focus: keeping common actions on one screen while separating the interface from database operations.
+I built this as an undergraduate Android project. The main goal was to let someone find an item, change its stock, and get back to work without navigating through several screens. Common inventory actions stay on one screen, and a separate helper class handles database operations.
 
-This portfolio edition includes a small set of review fixes. [Development notes](docs/DEVELOPMENT.md) preserve my original reflection, and [credits](CREDITS.md) distinguish the submitted work from the later cleanup.
+[Development notes](docs/DEVELOPMENT.md) describe the original project. [Credits](CREDITS.md) cover the later fixes and assistance.

@@ -1,9 +1,9 @@
 # Credits and project history
 
-Kyle DeJong developed the original Java Android warehouse-inventory application as undergraduate coursework. The original project included account creation/login, SQLite persistence, RecyclerView inventory CRUD, search, zero-stock filtering, and optional SMS alerts. Its reflection describes Android Studio/emulator testing and assistance with unfamiliar Android APIs and boilerplate.
+I built the original Java Android app as an undergraduate project. It included account creation and login, SQLite storage, a RecyclerView inventory screen, adding/editing/deleting stock, search, zero-stock filtering, and optional SMS alerts.
 
-The submitted [AI acknowledgment](AI_Acknowledgement.txt) is retained verbatim. The school submission and its repository remain unchanged.
+I used AI assistance with unfamiliar Android APIs and boilerplate, as described in the [development notes](docs/DEVELOPMENT.md). The original [AI acknowledgment](AI_Acknowledgement.txt) is included unchanged.
 
-AI-assisted portfolio review added salted password hashing and a database migration, moved account work off the UI thread, excluded the database from backup, added an SMS disable control, preserved pending permission state, made SMS settings scrollable, corrected light-theme consistency, handled multipart SMS, and added focused regression tests and documentation. These are portfolio changes, not claims about what was present in the graded submission.
+The AI-assisted review after submission added password hashing and database migration, moved account work off the UI thread, disabled database backups, improved SMS settings and permission handling, fixed theme consistency, and added multipart SMS support, regression tests, and documentation. [Verification notes](docs/VERIFICATION.md) list those changes and the test results. The school submission remains unchanged.
 
 Android/AndroidX, Material Components, Gradle, JUnit and Robolectric are third-party dependencies with their respective licenses. Generated Gradle wrapper scripts retain their copyright/license notices. The default Android Studio launcher artwork is retained. No school assignment handouts, rubrics or instructor materials are included.

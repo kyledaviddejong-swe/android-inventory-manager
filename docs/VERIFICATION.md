@@ -16,7 +16,7 @@ The portfolio source was built and tested on Linux with the project's Gradle 9.5
 
 The lint warnings concern possible background overdraw, unused or redundant resources/namespaces, button styling, and dependencies declared outside the version catalog. They do not prevent the build. The build also reports Gradle deprecations and a native-access warning from a test dependency. The documented Gradle/JDK versions passed; a future major build-tool upgrade has not been tested.
 
-## What the tests establish
+## Test coverage
 
 - Correct passwords verify; incorrect, empty, malformed and plaintext values do not. Equal passwords receive different random salts, and Unicode and intentional whitespace are preserved.
 - Accounts and stock persist when the database helper is reopened. Duplicate usernames and negative inventory quantities are rejected. Search matches item names and locations, and selection arguments prevent the tested SQL-injection input from changing query meaning.
@@ -25,9 +25,9 @@ The lint warnings concern possible background overdraw, unused or redundant reso
 - Account creation and login work through the activity's background-worker/UI path, including a rejected password and successful navigation to inventory.
 - SMS preferences stay account-specific. Disabling alerts preserves the saved destination, pending phone input survives activity recreation, and denied SMS permission does not block inventory operations.
 
-Robolectric tests used Android API 34. They exercise Android components and SQLite on the JVM. They are not a physical-device or emulator run, and no real SMS messages were sent.
+Robolectric tests used Android API 34 and exercised Android components and SQLite on the JVM. No real SMS messages were sent.
 
-## Focused changes from the submission
+## Changes after submission
 
 - Added salted PBKDF2-HMAC-SHA256 password storage with 600,000 iterations, a 16-byte random salt and a 256-bit derived key. Account operations run off the UI thread. The database migrates existing records instead of deleting accounts or inventory.
 - Excluded the database from Android backup/transfer rules and disabled application backup.
@@ -42,7 +42,7 @@ This is a local warehouse demonstration. Accounts share one installation's inven
 
 Ordinary inventory queries still run on the UI thread and reload the list. That is reasonable for this project's small dataset; large inventories would call for background queries, pagination and incremental list updates.
 
-The original author reports Android Emulator testing in the [development notes](DEVELOPMENT.md). This review did not repeat a device/emulator visual walkthrough. No screenshots are presented as newly verified runtime evidence. Carrier delivery, SIM selection, device-specific SMS behavior, accessibility at large font sizes, and broader device/layout coverage remain outside the verified scope. SMS delivery has no acknowledgment or retry queue.
+The [development notes](DEVELOPMENT.md) describe Android Emulator testing during the original project. The October 26 review used JVM tests and did not repeat that walkthrough. Carrier delivery, SIM selection, device-specific SMS behavior, large text sizes, and layouts across different devices still need hands-on testing. SMS delivery has no acknowledgment or retry queue.
 
 ## References for review changes
 
