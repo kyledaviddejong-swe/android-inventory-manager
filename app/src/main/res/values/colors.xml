@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="slate_header">#2F4050</color>
+    <color name="steel_blue">#47677D</color>
+    <color name="secondary_slate">#5F707C</color>
+    <color name="warning_brick">#A65D4E</color>
+
+    <color name="app_background">#EEF2F5</color>
+    <color name="surface_light">#FAFCFD</color>
+    <color name="cell_border">#D6DEE4</color>
+    <color name="field_border">#B8C5CE</color>
+    <color name="zero_stock_background">#F7E8E4</color>
+
+    <color name="text_primary">#263746</color>
+    <color name="text_secondary">#5F6F7B</color>
+    <color name="text_header_secondary">#D7E0E7</color>
+</resources>

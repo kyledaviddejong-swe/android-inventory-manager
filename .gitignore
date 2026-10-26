@@ -1,0 +1,19 @@
+# Local IDE and build output
+.idea/
+*.iml
+.gradle/
+**/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+.DS_Store
+Thumbs.db
+# Compiled packages, credentials and runtime data
+*.apk
+*.aab
+*.jks
+*.keystore
+*.db
+*.db-shm
+*.db-wal

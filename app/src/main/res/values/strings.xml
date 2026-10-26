@@ -1,0 +1,77 @@
+<resources>
+
+    <string name="app_name">Warehouse Inventory</string>
+
+    <!-- Login -->
+    <string name="warehouse_inventory">Warehouse Inventory</string>
+    <string name="sign_in_subtitle">Sign in to manage inventory</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="create_account">Create Account</string>
+    <string name="username_required">Username is required</string>
+    <string name="password_required">Password is required</string>
+    <string name="username_exists">Username already exists</string>
+    <string name="account_created">Account created successfully</string>
+    <string name="account_creation_failed">Unable to create account</string>
+    <string name="invalid_login">Invalid username or password</string>
+
+    <!-- Inventory -->
+    <string name="inventory">Inventory</string>
+    <string name="current_warehouse_stock">Current warehouse stock</string>
+    <string name="search_inventory">Search inventory</string>
+    <string name="out_of_stock_count">1 Item Out of Stock</string>
+    <string name="sms_alerts">SMS Alerts</string>
+    <string name="column_item">Item</string>
+    <string name="column_quantity">Qty</string>
+    <string name="column_location">Location</string>
+    <string name="column_action">Action</string>
+    <string name="delete">Delete</string>
+    <string name="add_item">Add Item</string>
+    <string name="item_name_required">Item name is required</string>
+    <string name="quantity_required">Quantity is required</string>
+    <string name="quantity_invalid">Enter a valid quantity</string>
+    <string name="quantity_nonnegative">Quantity cannot be negative</string>
+    <string name="location_required">Location is required</string>
+    <string name="item_added">Inventory item added</string>
+    <string name="item_add_failed">Unable to add inventory item</string>
+    <string name="edit_inventory_item">Edit Inventory Item</string>
+    <string name="complete_all_fields">Complete all fields</string>
+    <string name="item_update_failed">Unable to update inventory item</string>
+    <string name="tap_item_to_edit">Tap an item to edit</string>
+    <string name="delete_inventory_item">Delete Inventory Item</string>
+    <string name="delete_item_confirmation">Delete %1$s?</string>
+    <string name="item_delete_failed">Unable to delete inventory item</string>
+    <string name="show_all_items">Show All Items</string>
+    <string name="no_items_out_of_stock">No Items Out of Stock</string>
+    <string name="show_out_of_stock_items">Show Out of Stock (%1$d)</string>
+
+    <!-- Inventory item dialog -->
+    <string name="add_inventory_item">Add Inventory Item</string>
+    <string name="item_name">Item name</string>
+    <string name="quantity">Quantity</string>
+    <string name="location">Location</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <!-- SMS -->
+    <string name="zero_stock_sms_alerts">Zero-Stock SMS Alerts</string>
+    <string name="notification_settings">Notification settings</string>
+    <string name="sms_explanation">Receive an SMS notification when an inventory item reaches zero stock.</string>
+    <string name="sms_permission_explanation">SMS access is used only for zero-stock text alerts.</string>
+    <string name="enable_sms_notifications">Enable SMS Notifications</string>
+    <string name="not_now">Back to Inventory</string>
+    <string name="sms_optional">Inventory management will continue normally if SMS notifications are not enabled.</string>
+    <string name="sms_disabled">SMS notifications are currently disabled.</string>
+    <string name="sms_denied">SMS permission denied. Inventory functions remain available.</string>
+    <string name="phone_number">SMS phone number</string>
+    <string name="phone_number_required">Phone number is required</string>
+    <string name="sms_alerts_enabled">Zero-stock SMS alerts are enabled.</string>
+    <string name="sms_permission_granted">SMS permission granted. Enter a phone number and enable alerts.</string>
+    <string name="zero_stock_sms_message">Warehouse alert: %1$s has reached zero stock.</string>
+
+    <string name="account_storage_failed">Unable to access accounts. Please try again.</string>
+    <string name="disable_sms_notifications">Disable SMS Notifications</string>
+    <string name="sms_save_failed">Unable to save SMS settings. Please try again.</string>
+    <string name="sms_unavailable">SMS is unavailable on this device. Inventory functions remain available.</string>
+</resources>

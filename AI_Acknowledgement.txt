@@ -1,0 +1,1 @@
+OpenAI’s ChatGPT was used to assist with explaining Android concepts, interpreting the assignment requirements, suggesting UI structure and refinements, and reviewing the completed project. The implementation, design, and testing of the project were completed by me.
